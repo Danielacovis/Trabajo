@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Suma de Dígitos Pares</title>
+
+    <img src="imagenes/WhatsApp Image 2023-09-20 at 16.42.11.jpeg" alt="FUENTES DE INTELIGENCIA">
+</head>
+<body>
+    <h1>Calculadora de Suma de Dígitos Pares</h1>
+    <label for="numero">Ingresa un número:</label>
+    <input type="number" id="numero">
+    <button onclick="calcularSuma()">Calcular</button>
+    <p id="resultado"></p>
+
+    <script>
+        function calcularSuma() {
+            // Obtener el número ingresado por el usuario
+            const numero = document.getElementById("numero").value;
+            
+            // Convertir el número a una cadena de caracteres para iterar sobre sus dígitos
+            const numeroStr = numero.toString();
+
+            // Inicializar la variable para almacenar la suma de los dígitos pares
+            let sumaDigitosPares = 0;
+
+            // Iterar sobre los dígitos del número
+            for (let i = 0; i < numeroStr.length; i++) {
+                const digito = parseInt(numeroStr[i]);
+                if (!isNaN(digito) && digito % 2 === 0) {
+                    // Si el dígito es par, agregarlo a la suma
+                    sumaDigitosPares += digito;
+                }
+            }
+
+            // Mostrar el número ingresado y la suma de los dígitos pares en pantalla
+            const resultado = document.getElementById("resultado");
+            resultado.textContent = `Número ingresado: ${numero}\nSuma de dígitos pares: ${sumaDigitosPares}`;
+        }
+    </script>
+
+
+        <a href="index.html" target="_blank"> REPRODUCIR </a>
+        <p></p>
+        <a href="Tecnologìa.html" target="_blank"> Tecnologia</a>
+
+         
+</body>
+</html>
